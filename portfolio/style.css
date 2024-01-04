@@ -1,0 +1,350 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container.dark-mode{
+    background: purple;
+    color: #fff;
+}
+/*----------------------------------------- Style for the header component -------------------------------------*/
+header{
+    width: 100%;
+    height: 5rem;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+header nav .brand-name{
+    margin-left: 2rem;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li a{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    margin: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 1rem 1rem;
+}
+header nav ul li a.active::after,a.active::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fb2281;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+header nav ul li a:hover::after,a:hover::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fb2281;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#dark-mode{
+    margin-right: 2rem;
+    outline: none;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+}
+/*---------------------------------------- Style for the home component -----------------------------------*/
+#home{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#home h5 span{
+    font-size: 5rem;
+    font-weight: 100;
+    color: #fb2281;
+}
+#home .position{
+    font-size: 2rem;
+    font-weight: 50;
+}
+#home p{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+#home .btn{
+    margin-top: 2rem;
+    text-decoration: none;
+    background: #fb2281;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    color: #fff;
+}
+/*----------------------------------------------- Style for the about component ------------------------------------*/
+#about{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#about h5{
+    font-size: 3rem;
+    font-weight: 100;
+}
+#about p{
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+#about .row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#about .row .col1{
+    width: 20%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 25px;
+}
+#about .row .col1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+#about .row .col2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+#about .row .col2 .row2{
+    display: flex;
+}
+#about .row .col2 .row2 .card{
+    width: 10rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+    margin: 2rem;
+}
+#about .row .col2 .row2 .card h3{
+    text-align: center;
+}
+
+#about a{
+    margin-top: 2rem;
+    text-decoration: none;
+    background: #fb2281;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    color: #fff;
+}
+/*--------------------------------------------- Style for the skill component -----------------------------------------------*/
+.hero-banner{
+    margin-top: 2rem;
+    width: 100%;
+    height: 80vh;
+}
+.hero-banner .details h1{
+    font-size: 2.5rem;
+    width: auto;
+    padding-top: 3rem;
+    text-align: center;
+}
+.hero-banner .details p{
+    font-size: 1.5rem;
+    width: auto;
+    text-align: center;
+}
+.hero-banner .details .skills{
+    margin-top: 2rem;
+}
+.hero-banner .details .skills .progress-container{
+    width: 100%;
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.hero-banner .details .skills .progress-container .progress-bar{
+    color: #fff;
+    font-size: .7rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 15px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, purple,#fb2281,#fb2281);
+    width: 90%;
+}
+
+/*--------------------------------------------- style for the contact form ------------------------------------------------*/
+#contact{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent, #ffd000);
+    animation: animate 4s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent, #ffd000);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: #0c1022;
+    z-index: 1;
+}
+.box .form{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+    line-height: 30px;
+}
+.box .form .form-group{
+    width: 100%;
+}
+.box .form .form-group h1{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.box .form .form-group input[type='text']{
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 25px;
+    outline: none;
+}
+.box .form .form-group input[type='text']:focus{
+    border: 2px solid #15cffd;
+}
+.box .form .form-group input[type='email']{
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 25px;
+    outline: none;
+}
+.box .form .form-group input[type='email']:focus{
+    border: 2px solid #15cffd;
+}
+.box .form .form-group textarea{
+    margin-bottom: 3rem;
+    width: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 1rem;
+    border-radius: 25px;
+    color: #fff;
+    outline: none;
+    resize: none;
+}
+.box .form .form-group textarea:focus{
+    border: 2px solid #15cffd;
+}
+.box .form button{
+    outline: none;
+    border: none;
+    padding: .7rem 2rem;
+}
+footer{
+    width: 100%;    
+    margin-top: 2rem;
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+    #home{
+        margin-top: 5rem;
+    }
+    #about{
+        margin-top: 10rem;
+    }
+    #about .row{
+        display: block;
+    }
+    #about .row .col1{
+        width: 80%;
+        margin: .5rem 2rem;
+        border-radius: 25px;
+    }
+    #about .row .col1 img{
+        width: auto;
+    }
+    #about .row .col2{
+        display: block;
+        margin: .5rem 2rem;
+    }
+    #about .row2{
+        margin: 0 -3.4rem;
+    }
+    .hero-banner{
+        margin-top: 33rem;
+    }
+    #contact .box{
+        width: 300px;
+        height: 400px;
+    }
+}
